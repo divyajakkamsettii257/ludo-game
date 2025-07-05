@@ -1,0 +1,34 @@
+import random
+player_score=0
+computer_score=0
+round=1
+while round<=5:
+  print("current round",round)
+  player=int(input("enter your number from 1-6"))
+  while player<1  or  player>6:
+    print("invalid")
+    player=int(input("please enter your  correct number from 1-6"))
+  computer=random.randint(1,6)
+  print("human",player)
+  print("computer",computer)
+  if player>computer:
+    player_score=player_score+1
+    print("player score",player_score)
+    print("computer score",computer_score)
+  elif player<computer:
+    computer_score=computer_score+1
+    print("computer score",computer_score)
+    print("player score",player_score)
+  else:
+    print("its a draw")
+    print("computer score",computer_score)
+    print("player score",player_score)
+  round=round+1
+print()
+if player_score>computer_score:
+  print("You won")
+elif computer_score>player_score:
+  print("You lost")
+else:
+  print("its a draw")
+
